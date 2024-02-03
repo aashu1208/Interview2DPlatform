@@ -32,12 +32,12 @@ namespace Platformer
             if (player.deathState == true)
             {
                 //pc.PlaySound(pc.deathSound);
-                Invoke("GameOver", 0.5f);
+                Invoke("GameOver", 2.0f);
                 GameObject deathPlayer = (GameObject)Instantiate(deathPlayerPrefab, playerGameObject.transform.position, playerGameObject.transform.rotation);
                 deathPlayer.transform.localScale = new Vector3(playerGameObject.transform.localScale.x, playerGameObject.transform.localScale.y, playerGameObject.transform.localScale.z);
 
                 player.deathState = false;
-                Invoke("GameOver", 1.5f);
+                Invoke("GameOver", 3.5f);
                 //Time.timeScale = 1;
             }
         }
